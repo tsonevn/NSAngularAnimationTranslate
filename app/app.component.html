@@ -1,0 +1,15 @@
+<StackLayout>
+     
+    <GridLayout #container [visibility]="isItemVisibleFirst ? 'visible' : 'collapsed'" #initial_row columns="*, *, *" rows="auto" dock="bottom" class="choices initial">
+        <Button text="F" row="0" col="0" (tap)="showsecondline()"></Button>
+        <Button text="B" row="0" col="1" (tap)="showsecondline()"></Button>
+        <Button text="C" row="0" col="2" (tap)="showsecondline()"></Button>
+    </GridLayout>
+    <GridLayout #second [visibility]="isItemVisible ? 'visible' : 'collapsed'" #second_row columns="*, *, *" rows="auto" dock="bottom" class="choices hidden">
+        <Button text="M" row="1" col="0"></Button>
+        <Button text="F" row="1" col="1"></Button>
+        <Button text="D" row="1" col="2"></Button>
+    </GridLayout>
+    
+    <Label text="sample text"></Label>
+</StackLayout>
